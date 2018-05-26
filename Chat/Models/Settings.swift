@@ -8,6 +8,11 @@
 
 import UIKit
 
+class Settings {
+    static let loginViewBackgroundColor = UIColorFromHex(hexValue: 0x448ef6)
+    static let loginMainColor = UIColorFromHex(hexValue: 0x75c2f6)
+}
+
 extension UIColor {
     convenience init(red: Int, green: Int, blue: Int) {
         let newRed = CGFloat(red)/255
