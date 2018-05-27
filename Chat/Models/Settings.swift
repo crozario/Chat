@@ -7,10 +7,46 @@
 //
 
 import UIKit
+import Firebase
 
-class Settings {
-    static let loginViewBackgroundColor = UIColorFromHex(hexValue: 0x448ef6)
-    static let loginMainColor = UIColorFromHex(hexValue: 0x75c2f6)
+struct Constants {
+    
+    struct User {
+        var isLoggedIn: Bool {
+            get {
+                return Auth.auth().currentUser?.uid != nil
+            }
+        }
+        
+        var email: String? {
+            get {
+                return Auth.auth().currentUser?.email!
+            }
+        }
+    }
+    
+    struct Colors {
+        // MARK: AuthenticationViewController Colors
+        static let authenticationViewBackgroundColor = UIColorFromHex(hexValue: 0x005792)
+        static let authenticationSignUpButtonBackgroundColor = UIColorFromHex(hexValue: 0x00204a)
+        static let authenticationLogInButtonBackgroundColor = UIColorFromHex(hexValue: 0x00204a)
+        
+        // MARK: LogInViewController Colors
+        static let logInViewBackgroundColor = UIColorFromHex(hexValue: 0x005792)
+        static let logInButtonBackgroundColor = UIColorFromHex(hexValue: 0x00204a)
+        static let logInSeparatorViewColor = UIColorFromHex(hexValue: 0x00204a)
+        
+        
+        // MARK: SignUpViewController Colors
+        static let signUpViewBackgroundColor = UIColorFromHex(hexValue: 0x005792)
+        static let signUpButtonBackgroundColor = UIColorFromHex(hexValue: 0x00204a)
+        static let signUpSeparatorViewColor = UIColorFromHex(hexValue: 0x00204a)
+    }
+    
+    struct Images {
+        
+    }
+    
 }
 
 extension UIColor {

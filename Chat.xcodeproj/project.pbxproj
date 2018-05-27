@@ -9,11 +9,14 @@
 /* Begin PBXBuildFile section */
 		7A3534C17DBA4ED0D2D1389C /* Pods_Chat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE60419204858C98EA2F4463 /* Pods_Chat.framework */; };
 		C4369AE020B9EFA300D8856B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C4369ADF20B9EFA300D8856B /* GoogleService-Info.plist */; };
+		C47B925720BB063900E1BB47 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C47B925620BB063900E1BB47 /* SignUpViewController.swift */; };
+		C47B925920BB071700E1BB47 /* AuthenticationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C47B925820BB071700E1BB47 /* AuthenticationViewController.swift */; };
+		C47B925B20BB1DA900E1BB47 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C47B925A20BB1DA900E1BB47 /* LogInViewController.swift */; };
+		C47B925D20BB51C600E1BB47 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C47B925C20BB51C600E1BB47 /* TabBarController.swift */; };
 		C49F362420B78D7B0022CC27 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C49F362320B78D7B0022CC27 /* AppDelegate.swift */; };
 		C49F362B20B78D7C0022CC27 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C49F362A20B78D7C0022CC27 /* Assets.xcassets */; };
 		C49F362E20B78D7C0022CC27 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C49F362C20B78D7C0022CC27 /* LaunchScreen.storyboard */; };
 		C4E26EC520B8C6BA00E71C2E /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4E26EC420B8C6BA00E71C2E /* HomeViewController.swift */; };
-		C4E26EC720B8CA3000E71C2E /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4E26EC620B8CA3000E71C2E /* LoginViewController.swift */; };
 		C4E26ECC20B8CDEF00E71C2E /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4E26ECB20B8CDEF00E71C2E /* Settings.swift */; };
 /* End PBXBuildFile section */
 
@@ -21,13 +24,16 @@
 		481D8EFF1EA7B6FCC6F07513 /* Pods-Chat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Chat.release.xcconfig"; path = "Pods/Target Support Files/Pods-Chat/Pods-Chat.release.xcconfig"; sourceTree = "<group>"; };
 		AE60419204858C98EA2F4463 /* Pods_Chat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Chat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4369ADF20B9EFA300D8856B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		C47B925620BB063900E1BB47 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		C47B925820BB071700E1BB47 /* AuthenticationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationViewController.swift; sourceTree = "<group>"; };
+		C47B925A20BB1DA900E1BB47 /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
+		C47B925C20BB51C600E1BB47 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		C49F362020B78D7B0022CC27 /* Chat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Chat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C49F362320B78D7B0022CC27 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C49F362A20B78D7C0022CC27 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C49F362D20B78D7C0022CC27 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C49F362F20B78D7C0022CC27 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C4E26EC420B8C6BA00E71C2E /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-		C4E26EC620B8CA3000E71C2E /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		C4E26ECB20B8CDEF00E71C2E /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		F65E1F08FE01AF95D3D62CC4 /* Pods-Chat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Chat.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Chat/Pods-Chat.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -97,7 +103,10 @@
 		C4E26EC820B8CBC200E71C2E /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				C4E26EC620B8CA3000E71C2E /* LoginViewController.swift */,
+				C47B925820BB071700E1BB47 /* AuthenticationViewController.swift */,
+				C47B925A20BB1DA900E1BB47 /* LogInViewController.swift */,
+				C47B925620BB063900E1BB47 /* SignUpViewController.swift */,
+				C47B925C20BB51C600E1BB47 /* TabBarController.swift */,
 				C4E26EC420B8C6BA00E71C2E /* HomeViewController.swift */,
 			);
 			path = ViewControllers;
@@ -236,10 +245,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C4E26EC720B8CA3000E71C2E /* LoginViewController.swift in Sources */,
 				C49F362420B78D7B0022CC27 /* AppDelegate.swift in Sources */,
 				C4E26ECC20B8CDEF00E71C2E /* Settings.swift in Sources */,
+				C47B925B20BB1DA900E1BB47 /* LogInViewController.swift in Sources */,
 				C4E26EC520B8C6BA00E71C2E /* HomeViewController.swift in Sources */,
+				C47B925D20BB51C600E1BB47 /* TabBarController.swift in Sources */,
+				C47B925920BB071700E1BB47 /* AuthenticationViewController.swift in Sources */,
+				C47B925720BB063900E1BB47 /* SignUpViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -14,14 +14,20 @@ class HomeViewController: UITableViewController {
         super.viewDidLoad()
         navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Logout", style: .plain, target: self, action: #selector(handleLogout))
         
-//        var ref: DatabaseReference!
-//        ref = Database.database().reference()
-        
+//        if Auth.auth().currentUser?.uid == nil {
+//            handleLogout()
+//        }
+        handleLogout()
     }
     
     @objc func handleLogout() {
-        let loginController = LoginViewController()
-        present(loginController, animated: true, completion: nil)
+//        do {
+//            try Auth.auth().signOut()
+//        } catch let logoutError {
+//            print(logoutError)
+//        }
+        let authenticationViewController = AuthenticationViewController()
+        present(authenticationViewController, animated: true, completion: nil)
         
     }
 }
