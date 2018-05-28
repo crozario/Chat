@@ -53,7 +53,7 @@ class AuthenticationViewController: UIViewController {
     }
     
     @objc func logInButtonPressed() {
-        let logInViewController = LoginViewController()
+        let logInViewController = LogInViewController()
         present(logInViewController, animated: true, completion: nil)
     }
     
@@ -74,7 +74,7 @@ extension AuthenticationViewController {
         signUpButton.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
         signUpButton.widthAnchor.constraint(equalTo: view.widthAnchor, constant: -50).isActive = true
         signUpButton.heightAnchor.constraint(equalToConstant: 40).isActive = true
-        signUpButton.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -20).isActive = true
+        signUpButton.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -40).isActive = true
         
     }
     

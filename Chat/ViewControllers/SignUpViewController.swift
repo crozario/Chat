@@ -12,8 +12,12 @@ import Firebase
 class SignUpViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
+        nameTextField.delegate = self
+        emailTextField.delegate = self
+        passwordTextField.delegate = self
         
         setupViews()
+        nameTextField.becomeFirstResponder()
     }
     
     // MARK: Views
@@ -53,6 +57,7 @@ class SignUpViewController: UIViewController {
     let passwordTextField: UITextField = {
         let textField = UITextField()
         textField.placeholder = "Password"
+        textField.isSecureTextEntry = true
         return textField
     }()
     
@@ -122,6 +127,8 @@ extension SignUpViewController {
         setupEmailTextFieldConstraints()
         setupPasswordTextFieldConstraints()
         setupFieldSeparatorConstraints()
+        
+        setupTextFieldReturnType()
     }
     
     func setupSignUpViewContainerConstraints() {
@@ -187,5 +194,35 @@ extension SignUpViewController {
         emailPasswordSeparatorView.topAnchor.constraint(equalTo: emailTextField.bottomAnchor).isActive = true
         emailPasswordSeparatorView.heightAnchor.constraint(equalToConstant: 1).isActive = true
         
+    }
+}
+
+// MARK: Text Field Actions
+extension SignUpViewController: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        switch textField {
+        case nameTextField:
+            print("name text field")
+            nameTextField.resignFirstResponder()
+            emailTextField.becomeFirstResponder()
+        case emailTextField:
+            print("email text field")
+            emailTextField.resignFirstResponder()
+            passwordTextField.becomeFirstResponder()
+        case passwordTextField:
+            print("password text field")
+            passwordTextField.resignFirstResponder()
+            signUpButtonPressed()
+        default:
+            print("default text field clicked")
+            textField.resignFirstResponder()
+        }
+        return false
+    }
+    
+    func setupTextFieldReturnType() {
+        nameTextField.returnKeyType = .continue
+        emailTextField.returnKeyType = .continue
+        passwordTextField.returnKeyType = .join
     }
 }

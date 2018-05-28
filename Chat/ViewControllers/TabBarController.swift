@@ -8,21 +8,24 @@
 
 import UIKit
 
-//class TabBarController: UITabBarController {
-//    override func viewDidLoad() {
-//        super.viewDidLoad()
-//        self.delegate = self
-//    }
-//    
-//    override func viewWillAppear(_ animated: Bool) {
-//        super.viewWillAppear(animated)
-//        
-//        let homeViewController = HomeViewController()
-//        homeViewController.tabBarItem(
-//    }
-//}
-//
-//
-//extension TabBarController: UITabBarControllerDelegate {
-//    
-//}
+class TabBarController: UITabBarController {
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        let homeViewController = HomeViewController()
+        let homeNavController = UINavigationController(rootViewController: homeViewController)
+        homeNavController.tabBarItem.title = "Home"
+        
+        let searchViewController = SearchViewController()
+        let searchNavController = UINavigationController(rootViewController: searchViewController)
+        searchNavController.tabBarItem.title = "Search"
+        
+        viewControllers = [homeViewController, searchViewController]
+    }
+
+}
+
+
+extension TabBarController: UITabBarControllerDelegate {
+    
+}
