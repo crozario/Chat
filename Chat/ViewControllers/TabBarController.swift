@@ -12,6 +12,14 @@ class TabBarController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        createTabViews()
+    }
+
+}
+
+
+extension TabBarController: UITabBarControllerDelegate {
+    func createTabViews() {
         let homeViewController = HomeViewController()
         let homeNavController = UINavigationController(rootViewController: homeViewController)
         homeNavController.tabBarItem.title = "Home"
@@ -22,10 +30,4 @@ class TabBarController: UITabBarController {
         
         viewControllers = [homeViewController, searchViewController]
     }
-
-}
-
-
-extension TabBarController: UITabBarControllerDelegate {
-    
 }

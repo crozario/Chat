@@ -9,6 +9,8 @@ import UIKit
 import Firebase
 
 class LogInViewController: UIViewController {
+    
+    let slideAnimator = SlideAnimator()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -66,23 +68,27 @@ class LogInViewController: UIViewController {
     // MARK: Actions
     
     @objc func logInButtonPressed() {
-        guard let email = emailTextField.text, let password = passwordTextField.text else {
-            print("Invalid Form Failed")
-            return
-        }
-        Auth.auth().signIn(withEmail: email, password: password) {
-            (authResult, error) in
-
-            if error != nil {
-                print(error!)
-                return
-            }
-            print("Log In Success")
-
-            self.dismiss(animated: true, completion: nil)
-
-
-        }
+//        guard let email = emailTextField.text, let password = passwordTextField.text else {
+//            print("Invalid Form Failed")
+//            return
+//        }
+//        Auth.auth().signIn(withEmail: email, password: password) {
+//            (authResult, error) in
+//
+//            if error != nil {
+//                print(error!)
+//                return
+//            }
+//            print("Log In Success")
+//
+//
+//
+//
+//        }
+        let homeViewController = HomeViewController()
+        homeViewController.transitioningDelegate = SlideAnimator()
+        present(homeViewController, animated: true, completion: nil)
+            
     }
     
 }
